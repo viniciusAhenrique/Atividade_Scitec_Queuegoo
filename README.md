@@ -118,7 +118,6 @@ QueueGOO/
 ├── ATIVIDADE_1.md              Roteiro da primeira prática
 ├── ATIVIDADE_2.md              Descrição do incidente QG-002
 ├── CODESPACES.md               Passo a passo pelo navegador
-├── CODESPACES-MEDIADORES.md    Referência de configuração
 └── final.zip                  Solução e gabaritos protegidos
 ```
 
@@ -129,19 +128,6 @@ A pasta `apoio/` pode não aparecer no repositório enquanto estiver vazia.
 O arquivo **`final.zip`** reúne a implementação corrigida e os gabaritos. A senha será fornecida pelos mediadores **ao final do curso**.
 
 Depois da liberação, extraia o arquivo na pasta principal do projeto e siga `final/README.md`. A aplicação final permite alternar entre as duas atividades.
-
-<details>
-<summary><strong>Para os mediadores · preparação e distribuição</strong></summary>
-
-- Distribua o pacote `QueueGOO-alunos.zip` atualizado ou publique seu conteúdo extraído na raiz do repositório.
-- Inclua `.devcontainer/`, `.gitignore` e `.gitattributes` ao preparar o GitHub.
-- Configure o endereço do badge antes da oficina. Em cópias criadas por template, ajuste-o para o novo repositório.
-- Mantenha a pasta `final/` aberta e a senha apenas com os mediadores. O material dos alunos contém a solução protegida em `final.zip`.
-- Não publique `node_modules`, `.venv`, `.env.local` ou credenciais.
-- Após alterar os materiais, atualize os pacotes antes de distribuir. `final.rar`, quando presente no workspace dos mediadores, é uma alternativa ao ZIP da solução.
-- Consulte [CODESPACES-MEDIADORES.md](CODESPACES-MEDIADORES.md) para os detalhes do ambiente. A porta 8000 pode ficar pública durante a prática com dados simulados; a porta 8081 permanece privada.
-
-</details>
 
 ---
 

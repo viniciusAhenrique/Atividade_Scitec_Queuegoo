@@ -76,4 +76,3 @@ Para os mediadores executarem a solução, o mesmo procedimento usa `final/backe
 - Pare o Codespace pelo GitHub quando terminar.
 
 Se não houver internet ou Codespaces disponível, forme dupla em uma máquina preparada.
-Detalhes de configuração estão em [CODESPACES-MEDIADORES.md](CODESPACES-MEDIADORES.md).

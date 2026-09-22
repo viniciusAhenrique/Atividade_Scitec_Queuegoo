@@ -1,0 +1,25 @@
+{
+  "name": "QueueGOO SciTec",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "lts",
+      "pnpmVersion": "none"
+    }
+  },
+  "forwardPorts": [
+    8000,
+    8081
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "QueueGOO FastAPI",
+      "onAutoForward": "notify"
+    },
+    "8081": {
+      "label": "QueueGOO Expo Web",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash scripts/setup-codespace.sh"
+}

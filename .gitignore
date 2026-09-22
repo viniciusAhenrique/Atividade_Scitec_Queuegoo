@@ -1,0 +1,11 @@
+# Ambientes e arquivos específicos de cada computador
+node_modules/
+.venv/
+__pycache__/
+.expo/
+.env.local
+.env*.local
+*.pyc
+*.tsbuildinfo
+# Pacote de entrega gerado localmente
+QueueGOO-alunos.zip

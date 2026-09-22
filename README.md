@@ -1,33 +1,154 @@
-# QueueGOO — material dos alunos
+<div align="center">
 
-Comece pela [Atividade 1](ATIVIDADE_1.md), na pasta `starter/`.
-Depois siga a [Atividade 2](ATIVIDADE_2.md), na pasta `starter2/`.
+# QueueGOO
 
-- [Executar Atividade 1](starter/README.md)
-- [Executar Atividade 2](starter2/README.md)
+### Do primeiro `fetch` à investigação de um incidente.
 
-O arquivo `final.zip` contém a versão final e os gabaritos, protegidos por senha.
-A senha ficará com os mediadores e será fornecida ao final do curso.
-Quando autorizados, extraiam `final.zip` nesta pasta usando WinRAR ou outro extrator compatível com ZIP protegido por senha. Isso criará a pasta `final/`; sigam então `final/README.md`.
+Uma oficina prática para conectar **frontend e backend** — e entender o que acontece entre um clique e uma resposta.
 
-Execute somente uma versão por vez para evitar conflito de portas.
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Expo Web](https://img.shields.io/badge/Expo_Web-000020?style=flat-square&logo=expo&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+
+**[Começar a Atividade 1](ATIVIDADE_1.md)** · **[Investigar o incidente](ATIVIDADE_2.md)** · **[Executar pelo navegador](CODESPACES.md)**
+
+</div>
+
+---
+
+## Bem-vindo à equipe 👋
+
+O **QueueGOO** é um aplicativo de consulta a restaurantes. Durante a oficina, você vai conectar sua interface a uma API, acompanhar as requisições e investigar o comportamento de uma funcionalidade.
+
+A proposta é aprender fazendo: primeiro, com a orientação dos mediadores; depois, colocando em prática sua capacidade de investigar e resolver problemas.
+
+> **Nosso percurso:** construir a integração → observar o resultado → investigar um incidente.
+
+## Duas atividades, um mesmo projeto
+
+| | Atividade 1 · Integração guiada | Atividade 2 · Incidente QG-002 |
+| :--- | :--- | :--- |
+| **Seu desafio** | Conectar a lista de restaurantes à API. | Investigar a funcionalidade de detalhes. |
+| **Como vamos trabalhar** | Passo a passo, com a apresentação e os mediadores. | Em equipe, reproduzindo, investigando e validando. |
+| **Pasta de trabalho** | `starter/` | `starter2/` |
+| **Roteiro** | [Abrir Atividade 1 →](ATIVIDADE_1.md) | [Abrir Atividade 2 →](ATIVIDADE_2.md) |
+
+A segunda atividade acontece depois da primeira e tem **30 minutos** de investigação. Swagger, Console, Network, apresentação, documentação, internet e IA fazem parte das ferramentas disponíveis.
+
+## O que você vai praticar
+
+- Entender os papéis do cliente e do servidor.
+- Consultar uma API HTTP e interpretar respostas em JSON.
+- Usar `fetch`, atualizar o estado e mostrar dados na interface.
+- Reconhecer os estados de **carregamento, erro e sucesso**.
+- Investigar problemas por camadas e comprovar uma correção.
+
+```text
+Interface → fetch → FastAPI → dados locais
+    ↑                              │
+    └──── estado ← resposta JSON ──┘
+```
+
+Usamos dados simulados em memória para concentrar a prática na integração. Não é necessário configurar um banco de dados.
+
+## Vamos começar 🚀
+
+### 1. Prepare os arquivos
+
+Se recebeu `QueueGOO-alunos.zip`, salve-o no computador e escolha **Extrair para** no WinRAR. O pacote dos alunos não tem senha. Trabalhe na pasta extraída.
+
+Se está usando o repositório, abra sua cópia local do projeto.
+
+### 2. Confira o ambiente
+
+O modo recomendado da oficina é **local**, com Python 3, Node.js e npm. Abra um terminal na pasta principal e execute:
+
+**Windows · PowerShell**
+
+```powershell
+.\scripts\check-environment.ps1
+```
+
+**Linux, macOS ou Git Bash**
+
+```bash
+bash scripts/check-environment.sh
+```
+
+Essa verificação não instala nada. Com o ambiente disponível, siga para a atividade.
+
+### 3. Execute a Atividade 1
+
+Abra as [instruções de execução de starter](starter/README.md). Elas mostram os comandos para iniciar o **backend em um terminal** e o **frontend em outro**.
+
+Depois, siga o [roteiro da Atividade 1](ATIVIDADE_1.md), começando pelo backend e pelo Swagger.
+
+### 4. Continue para o incidente
+
+Ao concluir a primeira prática, encerre os servidores com **Ctrl+C**. Abra as [instruções de execução de starter2](starter2/README.md) e siga o [incidente QG-002](ATIVIDADE_2.md).
+
+> Execute **uma atividade por vez** para evitar conflitos de portas.
 
 ## Problemas com o ambiente local?
 
-O modo recomendado continua sendo local. Confira Python, Node e npm com `bash scripts/check-environment.sh` (Linux/macOS/Git Bash) ou `.\scripts\check-environment.ps1` (Windows/PowerShell). Depois siga o README da atividade.
+Você também pode executar as mesmas atividades inteiramente pelo navegador, usando **GitHub Codespaces**.
 
-Se Python, Node ou Expo não estiverem disponíveis, utilize o ambiente pelo navegador: [instruções de contingência](CODESPACES.md).
+**[Abrir o passo a passo do Codespaces →](CODESPACES.md)**
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/SEU_USUARIO/SEU_REPOSITORIO?quickstart=1)
 
-**PLACEHOLDER — mediadores: substituam `SEU_USUARIO/SEU_REPOSITORIO` pelo repositório real antes de distribuir.** Nenhum remote Git identificou o endereço nesta cópia. Em um template derivado, ajuste o badge para a nova cópia ou use Code → Codespaces.
+> **Badge aguardando configuração:** os mediadores devem substituir `SEU_USUARIO/SEU_REPOSITORIO` pelo repositório real. Enquanto isso, abra pelo menu **Code → Codespaces** no GitHub.
 
-- **Plano A:** verificar ambiente local → executar normalmente.
-- **Plano B:** abrir Codespaces → aguardar setup automático → `bash scripts/start-codespace.sh starter` ou `starter2` → mesmas atividades.
-- **Plano C:** sem ambiente local e sem Codespaces/internet → formar dupla em uma máquina preparada.
+| Plano | Quando usar | Próximo passo |
+| :--- | :--- | :--- |
+| **A · Local** | Computador com ambiente disponível. | Seguir o README da atividade. |
+| **B · Navegador** | Problemas de instalação ou configuração local. | Seguir [CODESPACES.md](CODESPACES.md). |
+| **C · Em dupla** | Sem ambiente local e sem Codespaces ou internet. | Trabalhar em uma máquina já preparada. |
 
-O setup instala cada atividade existente separadamente. `final` também funciona quando disponível para os mediadores. A porta 8000 pode ficar pública durante a sessão exclusivamente para a API com dados simulados; 8081 permanece privada. Consulte os detalhes em CODESPACES.md.
+## Encontre seu material
 
-## Abrir o material
+```text
+QueueGOO/
+├── starter/                   Atividade 1: integração guiada
+├── starter2/                  Atividade 2: investigação do incidente
+├── apoio/                     Espaço para materiais de apoio
+├── scripts/                   Verificação e execução do ambiente
+├── .devcontainer/             Configuração do Codespaces
+├── ATIVIDADE_1.md              Roteiro da primeira prática
+├── ATIVIDADE_2.md              Descrição do incidente QG-002
+├── CODESPACES.md               Passo a passo pelo navegador
+├── CODESPACES-MEDIADORES.md    Referência de configuração
+└── final.zip                  Solução e gabaritos protegidos
+```
 
-Primeiro salve este ZIP no computador e use **Extrair para** no WinRAR. O pacote dos alunos não tem senha. Trabalhe na pasta extraída. A solução fica em `final.zip` e só deve ser extraída quando o mediador fornecer a senha.
+A pasta `apoio/` pode não aparecer no repositório enquanto estiver vazia.
+
+## Solução ao final da oficina 🔓
+
+O arquivo **`final.zip`** reúne a implementação corrigida e os gabaritos. A senha será fornecida pelos mediadores **ao final do curso**.
+
+Depois da liberação, extraia o arquivo na pasta principal do projeto e siga `final/README.md`. A aplicação final permite alternar entre as duas atividades.
+
+<details>
+<summary><strong>Para os mediadores · preparação e distribuição</strong></summary>
+
+- Distribua o pacote `QueueGOO-alunos.zip` atualizado ou publique seu conteúdo extraído na raiz do repositório.
+- Inclua `.devcontainer/`, `.gitignore` e `.gitattributes` ao preparar o GitHub.
+- Configure o endereço do badge antes da oficina. Em cópias criadas por template, ajuste-o para o novo repositório.
+- Mantenha a pasta `final/` aberta e a senha apenas com os mediadores. O material dos alunos contém a solução protegida em `final.zip`.
+- Não publique `node_modules`, `.venv`, `.env.local` ou credenciais.
+- Após alterar os materiais, atualize os pacotes antes de distribuir. `final.rar`, quando presente no workspace dos mediadores, é uma alternativa ao ZIP da solução.
+- Consulte [CODESPACES-MEDIADORES.md](CODESPACES-MEDIADORES.md) para os detalhes do ambiente. A porta 8000 pode ficar pública durante a prática com dados simulados; a porta 8081 permanece privada.
+
+</details>
+
+---
+
+<div align="center">
+
+**Observe a requisição. Entenda a resposta. Valide o resultado.**
+
+QueueGOO · Oficina prática de integração frontend e backend
+
+</div>
